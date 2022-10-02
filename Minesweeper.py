@@ -3,8 +3,8 @@ import random
 from string import ascii_lowercase
 
 # set config values
-GRID_X = 8
-GRID_Y = 5
+GRID_X = 14
+GRID_Y = 8
 DENSITY = 1 / 5 # 20% chance of mine
 
 # set the number of mines based on the # of
