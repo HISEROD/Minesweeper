@@ -15,7 +15,7 @@ The first move is assumed to be a `dig` operation. All subsequent moves require 
 ### Example Gameplay
 
 | Move # | Desired Action          | Command                      |
-| ------ | ----------------------- | ---------------------------- |
+| :-:    | -:                      | -                            |
 | 1      | dig tile `h5`           | `h5` (no flag on first move) |
 | 2      | dig tile `h6`           | `dh6`                        |
 | 3      | flag tile `c9`          | `fc9`                        |
