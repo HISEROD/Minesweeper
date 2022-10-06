@@ -4,7 +4,7 @@ This is a simple console game of minesweeper created with Python.
 ## How to Play
 
 ### Setup
-To start playing, simply download `Minesweeper.py` and run the file. This will require a valid installation of Python 3.
+To start playing, simply download the repository and run `Minesweeper.py` file. This will require a valid installation of Python 3.
 
 ### First Move
 To start, type in the coordinates of the tile just like in a game of Battleship e.g. `g7` then press <kbd>enter</kbd>.
