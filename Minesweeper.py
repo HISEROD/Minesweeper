@@ -5,9 +5,7 @@ from string import ascii_lowercase
 from config import *
 from grid import *
 
-#Assign number of bordering mines to each square.
-
-#Create a search adjacent function since this functionality is used often.
+# search will count and assign the no. of neighboring mines for each tile
 def search():
     for y in range(size_y):
         for x in range(size_x):
@@ -21,7 +19,7 @@ def search():
                                 get_tile(x, y).num += 1
 
 
-#Assign mines' locations as 1's.
+# assign mines' locations
 def lay():
     m = mines
     tmpx = 0
@@ -32,13 +30,6 @@ def lay():
         if not get_tile(tmpx, tmpy).mine and (not tmpy in range(y-1,y+2) or not tmpx in range(x-1,x+2)):
             get_tile(tmpx, tmpy).mine = True
             m -= 1
-
-
-'''
-
--------TIME TO DRAW-------
-
-'''
 
 def you_win():
     print('''
@@ -59,7 +50,7 @@ def you_win():
 
 def domino(y,x):
     '''this function implements the domino effect which is
-seen when a tile which doesn't border any mines is selected'''
+seen when a tile which doesn't border any mines is picked'''
     global mines
     list = []
     y -= 1
@@ -107,7 +98,7 @@ start_time = time.time()
 def seconds():
     return str(round(time.time() - start_time))
 
-#initial info and grid
+# initial info and grid
 print('Time: 0     Flags: ' + str(mines))
 print(top_scale)
 for i in range(size_y):
@@ -117,7 +108,7 @@ for i in range(size_y):
     print(row)
     row = ''
 
-#first move
+# first move
 strin = input()
 x = letters.index(strin[0])
 y = int(strin[1:])-1
@@ -147,7 +138,7 @@ for i in range(size_y):
     print(row)
     row = ''
 
-#Loop until win or lose.
+# loop until win or lose
 while True:
     strin = input()
     x = letters.index(strin[1])
