@@ -40,7 +40,7 @@ def lay():
 
 '''
 
-def youWin():
+def you_win():
     print('''
 ▓▓    ▓▓   ▓▓▓▓▓   ▓▓   ▓▓
  ▓▓  ▓▓   ▓▓   ▓▓  ▓▓   ▓▓
@@ -84,7 +84,7 @@ for i in range(size_x):
 
 row = ''
 
-def checkWinLose():
+def check_win_lose():
     '''Returns 1 for a win, -1 for a loss, or 0 for neither.'''
     indicator = 1 # default to win
     for y in range(size_y):
@@ -162,7 +162,7 @@ while True:
         get_tile(x, y).vis = True
         if get_tile(x, y).num == 0:
             domino(y,x)
-    if checkWinLose() == -1:
+    if check_win_lose() == -1:
         print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(mines))
         print(top_scale)
         for i in range(size_y):
@@ -204,11 +204,11 @@ while True:
             row = (len(str(size_y)) - len(str(i + 1))) * ' '  + str(i + 1) + '|' + row
             print(row)
             row = ''
-    if checkWinLose() == 1:
-        youWin()
+    if check_win_lose() == 1:
+        you_win()
         break
 
-if checkWinLose() == -1:
+if check_win_lose() == -1:
     print('You got blown up by a mine!')
     time.sleep(1)
     input('Press Enter to leave.')
