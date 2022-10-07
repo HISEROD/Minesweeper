@@ -12,6 +12,7 @@ To start, type in the coordinates of the tile just like in a game of Battleship 
 ### Subsequent Moves
 The first move is assumed to be a `dig` operation. All subsequent moves require a flag character before the coordinates to specify whether you want to dig (`d`), flag (`f`), or remove a flag (`r`).
 
+*Example sequence of moves:*  
 | Move # | Desired Action          | Command                      |
 | :-:    | -:                      | -                            |
 | 1      | dig tile `h5`           | `h5` (no flag on first move) |
