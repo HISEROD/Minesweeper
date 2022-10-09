@@ -5,17 +5,17 @@ from string import ascii_lowercase
 from config import *
 from grid import *
 
-# search will count and assign the no. of neighboring mines for each tile
-def search():
+# set_nums will count and assign the no. of neighboring mines for each tile
+def set_nums():
     for y in range(size_y):
         for x in range(size_x):
             if get_tile(x, y).mine:
                 get_tile(x, y).num = 9
             else:
-                for i in range(3):
-                    for j in range(3):
-                        if (0 <= y+i-1 < size_y) and (0 <= x+j-1 < size_x) and not (i == 1 and j == 1):
-                            if get_tile(x+j-1, y+i-1).mine:
+                for y2 in range(3):
+                    for x2 in range(3):
+                        if (0 <= y+y2-1 < size_y) and (0 <= x+x2-1 < size_x) and not (y2 == 1 and x2 == 1):
+                            if get_tile(x+x2-1, y+y2-1).mine:
                                 get_tile(x, y).num += 1
 
 
@@ -114,7 +114,7 @@ x = letters.index(strin[0])
 y = int(strin[1:])-1
 get_tile(x, y).vis = True
 lay()
-search()
+set_nums()
 if get_tile(x, y).num == 0:
     domino(y,x)
 
