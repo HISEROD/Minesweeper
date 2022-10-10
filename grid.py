@@ -11,16 +11,18 @@ def get_tile(x, y):
 
 def get_mine(x, y):
     return get_tile(x, y).mine
-def get_num(x, y):
-    return get_tile(x, y).num
 def get_flag(x, y):
     return get_tile(x, y).flag
+def get_num(x, y):
+    return get_tile(x, y).num
 def get_vis(x, y):
     return get_tile(x, y).vis
 
 def mine(x, y):
     get_tile(x, y).mine = True
-def set_num(x, y, n):
-    get_tile(x, y).num = n
 def make_vis(x, y):
     get_tile(x, y).vis = True
+def flag(x, y):
+    get_tile(x, y).flag = True
+def set_num(x, y, n):
+    get_tile(x, y).num = n
