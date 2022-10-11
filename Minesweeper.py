@@ -1,11 +1,10 @@
 ﻿import time
 import random
-from string import ascii_lowercase
+from string import ascii_lowercase as letters
 
 from config import *
 from grid import *
 
-letters = ascii_lowercase
 top_scale = ' ' * len(str(size_y))
 
 for i in range(size_x):
