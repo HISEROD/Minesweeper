@@ -37,7 +37,7 @@ def seconds():
     return str(round(time.time() - start_time))
 
 # initial info and grid
-print('Time: 0     Flags: ' + str(mines))
+print('Time: 0     Flags: ' + str(flags))
 print(top_scale)
 for i in range(size_y):
     for j in range(size_x):
@@ -56,7 +56,7 @@ set_nums()
 if get_tile(x, y).num == 0:
     domino(x, y)
 
-print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(mines))
+print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(flags))
 print(top_scale)
 for i in range(size_y):
     for j in range(size_x):
@@ -83,16 +83,16 @@ while True:
     y = int(strin[2:])-1
     if strin[0] == 'f' and not get_tile(x, y).flag:
         get_tile(x, y).flag = 1
-        mines -= 1
+        flags -= 1
     elif strin[0] == 'r' and get_tile(x, y).flag:
         get_tile(x, y).flag = 0
-        mines += 1
+        flags += 1
     elif strin[0] == 'd' and not get_tile(x, y).vis:
         get_tile(x, y).vis = True
         if get_tile(x, y).num == 0:
             domino(x, y)
     if check_win_lose() == -1:
-        print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(mines))
+        print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(flags))
         print(top_scale)
         for i in range(size_y):
             for j in range(size_x):
@@ -117,7 +117,7 @@ while True:
             row = ''
         break
     else:
-        print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(mines))
+        print('Time: ' + seconds() + (6 - len(seconds())) * ' ' + 'Flags: ' + str(flags))
         print(top_scale)
         for i in range(size_y):
             for j in range(size_x):

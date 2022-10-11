@@ -43,7 +43,7 @@ def set_nums():
 
 # assigns mines' locations
 def lay(x, y):
-    m = mines
+    m = flags
     tmpx = 0
     tmpy = 0
     while m > 0:
@@ -56,7 +56,7 @@ def lay(x, y):
 def domino(x, y):
     '''this function implements the domino effect which is
 seen when a tile which doesn't border any mines is picked'''
-    global mines
+    global flags
     list = []
     y -= 1
     x -= 1
@@ -68,7 +68,7 @@ seen when a tile which doesn't border any mines is picked'''
             get_tile(x+j, y+i).vis = True
             if get_tile(x+j, y+i).flag:
                 get_tile(x+j, y+i).flag = False
-                mines += 1
+                flags += 1
             if get_tile(x+j, y+i).num == 0:
                 list.append([y+i,x+j])
     for i in range(len(list)):
