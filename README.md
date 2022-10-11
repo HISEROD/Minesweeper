@@ -1,9 +1,10 @@
 <div align="center">
 
-# Minesweeper
-This is a simple console game of minesweeper created with Python.
+  # Minesweeper
+  This is a simple console game of minesweeper created with Python.
 
-![gameplay](img/gameplay.gif)</div>
+  ![gameplay](img/gameplay.gif)
+</div>
 
 ## How to Play
 
