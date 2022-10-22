@@ -4,7 +4,7 @@ from string import ascii_lowercase as letters
 from config import *
 from grid import *
 
-top_scale = ' ' * len(str(size_y)) + [' ' + letters[i] for i in range(size_x)]
+top_scale = [' ' * len(str(size_y))] + [' ' + letters[i] for i in range(size_x)]
 
 row = ''
 
@@ -23,8 +23,6 @@ def check_win_lose():
     return indicator
 
 x,y = 0,0
-
-# time
 
 start_time = time.time()
 
@@ -75,12 +73,12 @@ for i in range(size_y):
 while True:
     strin = input()
     x = letters.index(strin[1])
-    y = int(strin[2:])-1
+    y = int(strin[2:]) - 1
     if strin[0] == 'f' and not get_tile(x, y).flag:
-        get_tile(x, y).flag = 1
+        get_tile(x, y).flag = True
         flags -= 1
     elif strin[0] == 'r' and get_tile(x, y).flag:
-        get_tile(x, y).flag = 0
+        get_tile(x, y).flag = False
         flags += 1
     elif strin[0] == 'd' and not get_tile(x, y).vis:
         get_tile(x, y).vis = True
