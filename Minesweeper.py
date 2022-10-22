@@ -1,5 +1,4 @@
-﻿import time
-import random
+import time
 from string import ascii_lowercase as letters
 
 from config import *
