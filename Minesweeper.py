@@ -1,10 +1,10 @@
-﻿import time
+import time
 from string import ascii_lowercase as letters
 
 from config import *
 from grid import *
 
-top_scale = [' ' * len(str(size_y))] + [' ' + letters[i] for i in range(size_x)]
+top_scale = ''.join([' '] * len(str(size_y)) + [' ' + letters[i] for i in range(size_x)])
 
 row = ''
 
