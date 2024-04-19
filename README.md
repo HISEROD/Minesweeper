@@ -9,7 +9,7 @@
 ## How to Play
 
 ### Setup
-To start playing, simply download the repository and run Minesweeper.py. This will require Python 3 to be installed.
+To start playing, ensure that you have Python 3 installed, download the repository, and run Minesweeper.py.
 
 ### First Move
 To start, type in the coordinates of the tile just like in a game of Battleship e.g. `g7` then press <kbd>enter</kbd>.
